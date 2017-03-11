@@ -1,0 +1,20 @@
+Aspects help to modularize cross-cutting concerns. A cross-
+cutting concern can be described as any functionality that affects multiple points of an
+application. Security, for example, is a cross-cutting concern, in that many methods in
+an application can have security rules applied to them.
+
+In software development, functions that span multiple points of an application are
+called cross-cutting concerns. Typically, these cross-cutting concerns are conceptually
+separate from (but often embedded directly within) the application’s business logic.
+Separating these cross-cutting concerns from the business logic is where aspect-
+oriented programming ( AOP ) comes into play.
+
+Aspects are often described in terms of advice, pointcuts, and join points.
+
+Advice defines both the what and the when of an aspect. In addition to describing
+the job that an aspect will perform, advice addresses the question of when to perform the job.
+
+If advice defines the what and when of aspects, then pointcuts define the where. A
+pointcut definition matches one or more join points at which advice should be woven.
+Often you specify these pointcuts using explicit class and method names or through
+regular expressions that define matching class and method name patterns.

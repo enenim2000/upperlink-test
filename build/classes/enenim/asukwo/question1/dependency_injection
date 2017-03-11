@@ -1,0 +1,13 @@
+
+Dependency Injection (DI) is a software design pattern that implements inversion of control for resolving dependencies.
+
+An injection is the passing of a dependency to a dependent object that would use it.
+
+DI is a process whereby objects define their dependencies. 
+The other objects they work with—only through constructor arguments or arguments to a factory method or property—are set on the 
+object instance after it is constructed or returned from a factory method.
+
+
+Constructor-based Dependency Injection (DI) is when the container invokes a constructor with a number of arguments, each of which represents a dependency or other class.
+
+Setter-based Dependency Injection (DI) is the when the container calls setter methods on your beans after it has invoked a no-argument constructor or no-argument static factory method to instantiate that bean.

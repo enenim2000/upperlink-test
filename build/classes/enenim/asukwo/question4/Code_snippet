@@ -1,0 +1,35 @@
+
+public interface Performer {
+	void perform() throws PerformanceException;
+}
+
+
+
+public class Juggler implements Performer {
+	private int beanBags = 3;
+	
+	public Juggler() {
+	}
+	
+	public Juggler(int beanBags) {
+		this.beanBags = beanBags;
+	}
+	
+	public void perform() throws PerformanceException {
+		System.out.println("JUGGLING " + beanBags + " BEANBAGS");
+	}
+}
+
+
+
+<!- Constructor injection-->
+<bean id="duke"
+	class="com.springinaction.springidol.Juggler">
+	<constructor-arg value="15" />
+</bean>
+
+
+
+ApplicationContext ctx = new ClassPathXmlApplicationContext("enenim//asukwo/question4/spring-idol.xml");
+Performer performer = (Performer) ctx.getBean("duke");
+performer.perform();
