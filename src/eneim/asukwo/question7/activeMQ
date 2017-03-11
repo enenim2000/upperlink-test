@@ -1,0 +1,8 @@
+
+It's used to reliably communicate between two distributed processes. 
+Yes you could store messages in a database to communicate between to processes, but as soon as the message is received you'd have to delete the message. 
+That means a row insert and delete for each message. When you try to scale that up communicating thousands of messages per second, databases tend to fall over.
+
+Message oriented middleware like ActiveMQ on the other hand are build to handle those use cases.
+ They asume that messages in a healthy system will be deleted very quickly and can do optimizations to avoid the overhead. 
+ It can also push messages to consumers instead of a consumer having to poll for new message by doing a SQL query. This further reduces the latency involved in processing new messages being sent into the system.
